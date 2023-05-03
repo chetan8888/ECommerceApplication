@@ -4,9 +4,10 @@ import axios from "axios";
 import ShopCategory from "./Container/ShopCategory";
 import "./Shop.css";
 import ReactLoading from "react-loading";
+import { Helmet } from "react-helmet";
 
 const Shop = () => {
-  TabTitle("Shop - SHEMA");
+  TabTitle("Shop");
   const [menItems, setMenItems] = useState();
   const [womenItems, setWomenItems] = useState();
   const [kidsItems, setKidsItems] = useState();
@@ -27,6 +28,10 @@ const Shop = () => {
 
   return (
     <div className="shop__contianer">
+      <Helmet>
+        <title>Shop</title>
+        <meta name="description" content="Shop Page." />
+      </Helmet>
       {loading && (
         <ReactLoading
           type="balls"
