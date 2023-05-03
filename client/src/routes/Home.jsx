@@ -5,8 +5,11 @@ import FeaturedItems from "../components/Featured/Items/FetauredItems";
 import FeaturedCategories from "../components/Featured/Categories/FeaturedCategories";
 import { TabTitle } from "../utils/General";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+
+  const { t } = useTranslation();
   const [featuredItems, setFeaturedItems] = useState();
   TabTitle("Home - Shopping");
 
@@ -27,7 +30,7 @@ const Home = () => {
     <Fragment>
       <Profiler id="Home Component" onRender={logRenderDuration}>
         <Helmet>
-          <title>Shopzy</title>
+          <title>{t("websiteName")}</title>
           <meta name="description" content="Shopzy Home Page." />
         </Helmet>
         <Landing />
