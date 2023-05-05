@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { TabTitle } from "../../utils/General";
 import axios from "axios";
-import ShopCategory from "./Container/ShopCategory";
-import "./Shop.css";
 import ReactLoading from "react-loading";
 import { Helmet } from "react-helmet";
+import ShopCategory from "./Container/ShopCategory";
+import "./Shop.css";
 
 const Shop = () => {
   TabTitle("Shop");
@@ -35,7 +35,7 @@ const Shop = () => {
       {loading && (
         <ReactLoading
           type="balls"
-          color="#FFE26E"
+          color="pink"
           height={100}
           width={100}
           className="container h-100 w-10 justify-self-center align-self-center m-auto"

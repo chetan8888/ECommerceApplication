@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-
   const { t } = useTranslation();
   const [featuredItems, setFeaturedItems] = useState();
   TabTitle("Home - Shopping");

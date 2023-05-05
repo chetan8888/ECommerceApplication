@@ -2,16 +2,17 @@ import "./Landing.css";
 import land from "../../asset/brand/men2.png";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Landing = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="landing__container">
       <div className="landing__header__container">
         <div className="landing__header">
-          <h3 className="landing__header__discount">UP TO 35% DISCOUNT</h3>
-          <h1 className="landing__header__main">
-            Checkout The Best Fashion Style
-          </h1>
+          <h3 className="landing__header__discount">{t("Discount")}</h3>
+          <h1 className="landing__header__main">{t("MainTitle")}</h1>
           <Link to="/shop">
             <Button
               variant="outlined"
@@ -34,7 +35,7 @@ const Landing = () => {
                 },
               ]}
             >
-              SHOP NOW
+              {t("SHOPNOW")}
             </Button>
           </Link>
         </div>

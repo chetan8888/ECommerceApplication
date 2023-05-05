@@ -14,6 +14,7 @@ const Category = (props) => {
 
   const [show, setShow] = useState("All");
   const [filter, setFilter] = useState("Latest");
+  const [numToShow, setNumToShow] = useState(5); // state to keep track of number of cards to show
 
   const handleShowChange = (event) => {
     setShow(event.target.value);
@@ -21,6 +22,10 @@ const Category = (props) => {
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
+  };
+
+  const handleShowMoreClick = () => {
+    setNumToShow(numToShow + 5); // update state to show 5 more cards
   };
 
   return (
@@ -64,33 +69,39 @@ const Category = (props) => {
         </div>
         <div className="category__card__container">
           <div className="category__product__card">
-            {props.items.map((data) => (
+            {/* {props.items.map((data) => (
+              <ItemCard item={data} category={props.category} />
+            ))} */}
+            {props.items.slice(0, numToShow).map((data) => (
               <ItemCard item={data} category={props.category} />
             ))}
-            <div className="show__more__action">
-              <Button
-                variant="outlined"
-                sx={[
-                  {
-                    width: "200px",
-                    height: "50px",
-                    borderRadius: "20px",
-                    fontWeight: "700",
-                    backgroundColor: "pink",
-                    borderColor: "pink",
-                    color: "black",
-                  },
-                  {
-                    "&:hover": {
+            {numToShow < props.items.length && (
+              <div className="show__more__action">
+                <Button
+                  onClick={handleShowMoreClick}
+                  variant="outlined"
+                  sx={[
+                    {
+                      width: "200px",
+                      height: "50px",
+                      borderRadius: "20px",
+                      fontWeight: "700",
+                      backgroundColor: "pink",
                       borderColor: "pink",
-                      backgroundColor: "none",
+                      color: "black",
                     },
-                  },
-                ]}
-              >
-                Show more
-              </Button>
-            </div>
+                    {
+                      "&:hover": {
+                        borderColor: "pink",
+                        backgroundColor: "none",
+                      },
+                    },
+                  ]}
+                >
+                  Show more
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>

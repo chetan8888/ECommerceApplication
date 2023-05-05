@@ -7,34 +7,36 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="footer__container">
         <div className="footer__items__container">
           <div className="footer__help__container">
             <div className="footer__help__header">
-              <h1>Help</h1>
+              <h1>{t("Help")}</h1>
             </div>
             <ul className="fotter__help__links">
               <li className="help__link">
-                <a href="/"> Shipping</a>
+                <a href="/"> {t("Shipping")}</a>
               </li>
               <li className="help__link">
-                <a href="/">Refund</a>
+                <a href="/">{t("Refund")}</a>
               </li>
               <li className="help__link">
-                <a href="/">FAQ</a>
+                <a href="/">{t("FAQ")}</a>
               </li>
               <li className="help__link">
-                <a href="/">Accessiblity</a>
+                <a href="/">{t("Accessibility")}</a>
               </li>
             </ul>
           </div>
           <div className="footer__contact__container">
             <div className="footer__contact__header">
-              <h1>Contact Us</h1>
+              <h1>{t("contactUs")}</h1>
             </div>
             <ul className="footer__contacts">
               <li className="footer__contact">
@@ -50,7 +52,7 @@ const Footer = () => {
           </div>
           <div className="footer__social__link__container">
             <div className="footer__social__link__header">
-              <h1>Stay Connected</h1>
+              <h1>{t("stayConnected")}</h1>
             </div>
             <ul className="footer__social__links">
               <li className="social__link">

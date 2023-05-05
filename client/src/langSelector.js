@@ -15,6 +15,9 @@ function LanguageSelector() {
         borderRadius: "10px",
         height: "40px",
         border: "2px solid pink",
+        width: "100px",
+        padding: "6px",
+        marginTop: "5px",
       }}
     >
       <option value="en">English</option>

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "./CategoryCard.css";
 import { Button } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const CategoryCard = (props) => {
+  const { t } = useTranslation();
+
   return (
     <div className="category__card__card">
       <div className="category__image">
@@ -31,7 +34,7 @@ const CategoryCard = (props) => {
                 },
               ]}
             >
-              SHOP NOW
+              {t("SHOPNOW")}
             </Button>
           </Link>
         </div>

@@ -1,3 +1,26 @@
 {
-  "websiteName": "Shopzy"
+  "websiteName": "Shopzy",
+  "home": "Home",
+  "shop": "Shop",
+  "men": "Men",
+  "women": "Women",
+  "kids": "Kids",
+  "Discount": "UP TO 35% DISCOUNT",
+  "MainTitle": "Checkout The Best fashion Style",
+  "SHOPNOW": "SHOP NOW",
+  "FeaturedCategories": "FEATURED CATEGORIES",
+  "FeaturedItems": "Featured Items",
+  "showAll": "Show all",
+  "search": "Search for products",
+  "Help": "Help",
+  "Shipping": "Shipping",
+  "Refund": "Refund",
+  "FAQ": "FAQ",
+  "Accessibility": "Accessibility",
+  "contactUs": "Contact Us",
+  "stayConnected": "Stay Connected",
+  "wishlist": "Your Wishlist",
+  "noItems": "No Items",
+  "fashion": "Fashion",
+  "recommended": "Recommended Products"
 }

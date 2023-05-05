@@ -1,3 +1,22 @@
 {
-    "websiteName": "Boutique"
-  }
+  "websiteName": "Shopzy",
+  "home": "Accueil",
+  "shop": "Boutique",
+  "men": "Hommes",
+  "women": "Femmes",
+  "kids": "Enfants",
+  "Discount": "JUSQU'À 35% DE RÉDUCTION",
+  "MainTitle": "Découvrez le meilleur style de mode",
+  "SHOPNOW": "ACHETER",
+  "FeaturedCategories": "CATÉGORIES EN VEDETTE",
+  "FeaturedItems": "Articles en vedette",
+  "showAll": "Voir tout",
+  "search": "Recherche de produits",
+  "Help": "Aide",
+  "Shipping": "Livraison",
+  "Refund": "Remboursement",
+  "FAQ": "FAQ",
+  "Accessibility": "Accessibilité",
+  "contactUs": "Contactez-nous",
+  "stayConnected": "Restez connecté"
+}
