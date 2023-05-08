@@ -6,21 +6,21 @@ import "./index.css";
 
 const Search = () => {
   const search = useContext(SearchContext);
-  const [searchParam, setSearchParam] = useSearchParams();
+  const [setSearchParam] = useSearchParams();
 
-  const searchQuery = {
-    query: search.searchQuery,
-  };
+  const searchQuery = search.searchQuery;
 
   useEffect(() => {
     setSearchParam(searchQuery, { replace: true });
-  }, [searchQuery.query]);
+  }, [searchQuery, setSearchParam]);
 
   return (
     <div className="search__container">
-      <div className="search__container__header">
-        <h1>No results found for "{search.searchQuery}"</h1>
-      </div>
+      {search.searchQuery && (
+        <div className="search__container__header">
+          <h1>No results found for "{search.searchQuery}"</h1>
+        </div>
+      )}
     </div>
   );
 };
