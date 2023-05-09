@@ -21,7 +21,7 @@ const RegisterCard = () => {
         password,
       });
       console.log(res.data); // log the response from the API
-      if (res.data.success == true) {
+      if (res.data.success === true) {
         navigate('/account/login'); // Navigate to login component
       }
     } catch (err) {
