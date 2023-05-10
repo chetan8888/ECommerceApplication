@@ -19,7 +19,6 @@ const { addItemToCart } = require(cartFunction.path);
 
 const saveState = async (context, user, sender, newIntent) => {
   const userExists = user !== undefined;
-  console.log("userExists: ", userExists)
   if (!userExists) {
     await createUser(context, sender, newIntent);
     console.log("createUser done")
@@ -35,7 +34,9 @@ const saveState = async (context, user, sender, newIntent) => {
 };
 
 const handleIntent = async (context, input, sender, baseURL) => {
+  console.log("input: ", input);
   const { intent } = input;
+  console.log("intent: ", intent)
   let answer = "";
   const user = await getUserByPhoneNumber(context, sender);
 
