@@ -18,6 +18,9 @@ Full-stack ecommerce application built with MERN stack. This project has two fea
 - MongoDB - NoSQL database
 - Expressjs - Framework to handle routes and requests
 - Mongoose - MongoDB object modeling tool to model the database schema
+- Twilio - Used to run serverles Twilio functions
+- NLPJS - Used to run serverless NLP functions
+
 
 ## Installation
 
@@ -45,6 +48,10 @@ After this you can run the project locally:
   - <code>cd server</code>
   - <code>npm run dev</code>
     TIP: Run both in split terminal so that you can see both ends running
+- To run chatbot
+  - <code>cd chatbot</code>
+  - <code>twilio serverless:start</code>
+  - <code>ngrok http 3001</code>
 
 # Languages and tools
 
@@ -53,3 +60,4 @@ After this you can run the project locally:
 - [Expressjs](https://expressjs.com)
 - [Mongoose](https://mongoosejs.com)
 - [Material UI](https://mui.com/)
+- [NLP JS](https://github.com/axa-group/nlp.js)
