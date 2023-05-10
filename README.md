@@ -60,3 +60,4 @@ After this you can run the project locally:
 - [Expressjs](https://expressjs.com)
 - [Mongoose](https://mongoosejs.com)
 - [Material UI](https://mui.com/)
+- [NLP JS](https://github.com/axa-group/nlp.js)
