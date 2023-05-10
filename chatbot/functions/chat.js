@@ -19,9 +19,10 @@ const { addItemToCart } = require(cartFunction.path);
 
 const saveState = async (context, user, sender, newIntent) => {
   const userExists = user !== undefined;
-
+  console.log("userExists: ", userExists)
   if (!userExists) {
     await createUser(context, sender, newIntent);
+    console.log("createUser done")
   } else {
     if (user.fields.State !== newIntent) {
       const userId = user.id;
@@ -81,8 +82,10 @@ const handleIntent = async (context, input, sender, baseURL) => {
 
     case "showProducts":
       await saveState(context, user, sender, intent);
+      console.log("saveState done")
       const products = await getProducts(context, baseURL, sender);
       await sendProducts(context, products, baseURL, sender);
+      console.log("sendProducts done")
       answer = "";
       return answer;
 
